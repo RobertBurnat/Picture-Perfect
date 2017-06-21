@@ -4,7 +4,8 @@
 body {
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 15px; }
 
 .row:before, .row:after {
   content: "";
@@ -512,3 +513,5 @@ footer {
 
   .col-m-12 {
     width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
