@@ -1,0 +1,30 @@
+{
+  "name": "kodilla-ambitiousproject1",
+  "version": "1.0.0",
+  "description": "Install grunt to project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "sass": "^1.0.0-beta.1"
+  },
+  "scripts": {
+    "test": "kodilla-tet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertBurnat/ambitious-project-1.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Robert Burnat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertBurnat/ambitious-project-1/issues"
+  },
+  "homepage": "https://github.com/RobertBurnat/ambitious-project-1#readme"
+}
