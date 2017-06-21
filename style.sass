@@ -1,0 +1,475 @@
+$color: #fff
+$align: center
+$alignl: left
+$colorb: #222626
+$colorg: #959595
+@mixin gallery_bg
+	background-size: cover
+	background-repeat: no-repeat
+*
+	box-sizing: border-box
+body
+	margin: 0 auto
+	font-family: "Open Sans", sans-serif
+	overflow-x: hidden
+.row
+	&:before,
+	&:after
+		content: ""
+		display: table
+		clear: both
+.container
+	max-width: 1200px
+	margin: 50px auto
+	width: 100%
+[class*="col-"] 
+	float: left
+	width: 100%
+/* JUMBOTRON */
+header
+	margin-top: -50px
+	position: relative
+	height: 100vh
+	background: url("http://i.imgur.com/m0thGCb.jpg") fixed
+	background-size: cover
+	background-position: 60% 0
+	span
+		position: absolute
+		display: inline-block
+		font-style: italic
+		font-weight: bold
+		margin: 10px 5px
+		font-size: 20px
+	a
+		margin: 50px 0
+		display: inline-block
+		color: $color
+		text-decoration: none
+	h1,
+	p
+		color: $color
+		max-width: 500px
+	h1
+		margin-top: 40vh
+		font-size: 60px
+		font-weight: 300
+	.circle
+		position: relative
+		width: 50px
+		height: 50px
+		border: 3px solid #fff
+		border-radius: 50%
+		display: inline-block
+		&:after 
+			content:	""
+			height: 15px
+			width: 15px
+			border: 3px solid #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			border-radius: 50%
+		&:hover,
+		&:active
+			animation: spin 2s linear infinite
+			border-top: 5px none
+		&:hover:after,
+		&:active:after
+			border-bottom: 3px none
+@keyframes spin
+	0%	
+		transform:	rotate(0deg)
+	100%
+		transform:	rotate(360deg)
+.smartphone 
+	img
+		position: absolute
+		height: 90vh
+		margin-top: -340px
+		right: 20vw
+/* Sekcja start */
+.start
+	text-align: $alignl
+	line-height: 24px
+	h1
+		color: $colorb
+		font-weight: 300
+		margin-bottom: 30px
+	p
+		color: #959595
+	.right-col
+		margin-top: 150px
+		padding-left: 25px
+	.left-col 
+		h2 
+			margin-bottom: 30px
+/* Galeria */
+.container-gallery 
+	text-align: $alignl
+.gallery
+	[class*="col-"]
+		height: 300px
+		padding: 20px 33px
+		color: $color
+		position: relative
+	p
+		padding-top: 20px
+	.pic1 
+		background-color: #c264ad
+	.pic2 
+		background-color: #105fc5
+	.pic3 
+		background: url("http://i.imgur.com/9CVJRIp.jpg")
+		@include gallery_bg
+	.pic4
+		background-color: #7b0f0f
+	.pic5
+		background: url("http://i.imgur.com/0GRlnSy.jpg")
+		@include gallery_bg
+		padding-right: 30%
+	.pic6
+		background-color: #329d46
+	.pic7
+		background: url("http://i.imgur.com/9CVJRIp.jpg")
+		@include gallery_bg
+	.pic
+		transition: .5s
+		&:hover,
+		&:active
+			filter: grayscale(80%)
+			h2
+				text-decoration: underline
+.find-out
+	position: absolute
+	bottom : 0
+	padding-bottom: 3vh
+	a
+		text-decoration: none
+		color: $color
+	&:hover,
+	&:active
+		text-decoration: underline
+		i
+			margin-left: 100px
+	i
+		margin-left: 15px
+		transition: .5s
+/* Sekcja korzysci */
+.benefits 
+	.col-12
+		padding-bottom: 50px
+		>h1 
+			font-size: 2em
+			font-weight: 300
+			margin-bottom: 50px
+			color: $colorb
+		.col-3
+			padding: 0 15px
+			h2
+				font-size: 13px
+				font-weight: 600
+				color: #67676d
+				line-height: 24px
+			p
+				color: $colorg
+/* Jumbotron z Samochodem */
+.car-jumbotron 
+	background: url("http://i.imgur.com/1jTUPgk.jpg") fixed
+	height: 80vh
+	background-size: cover
+	background-position: 50% 0
+	h1
+		font-size: 3.2em
+		font-weight: 300
+		margin-top: 35vh
+		margin-bottom: 25px
+	h1,
+	p,
+	a
+		color: $color
+		max-width: 500px
+	a, 
+	i 
+		line-height: 35px
+		transition: .5s
+	i
+		margin-left: 15px
+	a
+		&:hover,
+		&:active
+			i
+				margin-left: 100px
+/* Reasons */
+.reasons
+	background-color: #82ca9c
+	color: $color
+	margin-top: -50px
+	padding: 20px 0
+	h1
+		font-weight: 300
+		font-size: 35px
+	.col-12 
+		padding: 80px 0
+		.col-4
+			padding: 20px
+			h1
+				font-size: 13px
+				font-weight: 600
+				line-height: 24px
+			p
+				font-size: 14px
+/* Offert */
+.offert
+	margin: 150px 0
+	.col-6
+		height: 400px
+		padding: 50px 0
+		&:hover,
+		&:active
+			box-shadow: 0 0 15px
+		p
+			margin-top: 20px
+			color: #8297a7
+	.box
+		margin-left: 80px
+		max-width: 350px
+	i
+		margin-top: 20px
+		font-size: 30px
+		color: #ccc
+		margin-right: 15px
+.first-box 
+	span
+		width: 65px
+		background-color: #e1e1e1
+.second-box 
+	span
+		width: 130px
+		background-color: #bd8cbf
+.tag
+	height: 25px
+	line-height: 25px
+	text-align: $align
+	display: inline-block
+	border-radius: 10px
+	color: $color
+	font-weight: bold
+.price
+	display: block
+	margin-top: 20px
+	width: 150px
+	height: 50px
+	color: $color
+	background-color: #179579
+	border: none
+	font-weight: bolder
+	border-radius: 15px
+	&:hover,
+	&:active
+		transform: scale(1.2)
+/* STOPKA */
+footer
+	background-color: #192431
+	padding: 80px 0px
+	color: $color
+	position: relative
+	h4
+		margin-bottom: 40px
+	.info
+		padding-right: 35px
+		font-size: 10px
+		color: #57697f
+	.form-group 
+		position: relative
+		max-width: 500px
+		input, 
+		button
+			height: 50px
+		button
+			position: absolute
+			top: 0
+			right: 0
+		i
+			font-size: 20px
+			margin: 0 auto
+	.formularz
+		padding: 0 50px
+	ul
+		white-space: nowrap
+		padding: 0
+		list-style-type: none
+	.list-container 
+		padding: 14px
+	.ending 
+		position: absolute
+		width: 100%
+		text-align: $align
+		height: 50px
+		background: rgba(0, 0, 0, 0.6)
+		line-height: 50px
+		font-size: 0.8em
+		bottom: 0
+.col-1
+	width: 8.33%
+.col-2
+	width: 16.66%
+.col-3
+	width: 25%
+.col-4
+	width: 33.33%
+.col-5
+	width: 41.66%
+.col-6
+	width: 50%
+.col-7
+	width: 58.33%
+.col-8
+	width: 66.66%
+.col-9
+	width: 75%
+.col-10
+	width: 83.33%
+.col-11
+	width: 91.66%
+.col-12
+	width: 100%
+
+@media (max-width: 991px)
+	header
+		position: relative
+		h1,
+		p
+			text-align: $align
+		h1
+			margin-top: 0
+	.napisy
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+	.smartphone 
+		img
+			display: none
+	.start
+		text-align: $align
+		padding: 0 35px
+		.right-col
+			margin-top: 0
+			padding: 0
+	.container-gallery
+		text-align: $alignl
+		p
+			text-align: $alignl
+	.gallery 
+		.pic5
+			padding-right: 45px
+	.benefits
+		text-align: $align
+		padding: 0 35px
+	.car-jumbotron
+		text-align: $align
+		padding: 0 35px
+		position: relative
+		h1
+			margin-top: 0
+		a
+			&:hover,
+			&:active
+				i
+					margin-left: 60px
+	.reasons
+		text-align: $align
+	.offert 
+		text-align: $align
+		padding-left: 5px
+	.offert 
+		.box 
+			position: relative
+			margin-left: 0
+			margin-bottom: 10px
+			padding: 0 10px
+	.first-box,
+	.second-box
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		text-align: $align
+	.price
+		display: inline-block
+	footer
+		text-align: $align
+		.container 
+			padding: 0 50px
+		.form-group
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+		.info 
+			margin-top: -30px
+			padding-right: 0
+	.col-s-1
+		width: 8.33%
+	.col-s-2
+		width: 16.66%
+	.col-s-3
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+@media (min-width: 991px) and (max-width: 1199px)
+	.smartphone 
+		img
+			height: 60vh
+			margin-top: -100px
+			right: -0.2vh
+	.gallery 
+		[class*="col-"]
+			padding: 20px
+		.find-out
+			padding-bottom: 2vh
+	.container
+		margin-left: 50px
+@media (max-width: 576px)
+	.car-jumbotron 
+		font-size: 0.8em
+@media (min-width: 768px) and (max-width: 991px)
+	.col-m-1
+		width: 8.33%
+	.col-m-2
+		width: 16.66%
+	.col-m-3
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11
+		width: 91.66%
+	.col-m-12 
+		width: 100%
